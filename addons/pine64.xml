@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+  <!-- BEGIN DEVICE -->
+  <project groups="pdk" name="ayufan-pine64/android_external_busybox" path="external/busybox" remote="github" revision="nougat" />
+  <project groups="pdk" name="ayufan-pine64/android_external_ethtool" path="external/ethtool" remote="github" revision="s805_4.4.2_master" />
+  <project groups="pdk" name="ayufan-pine64/boot-tools" path="vendor/ayufan-pine64/boot-tools" remote="github" revision="master"/>
+  <project groups="pdk" name="ayufan-pine64/device-pine64-common" path="vendor/ayufan-pine64/pine64-common" remote="github" revision="master" />
+  <project groups="pdk" name="blissroms-pine64/device-softwinner" path="device/softwinner" remote="github" revision="n7.1-pine64" />
+  <project groups="device,fugu,broadcom_pdk,pdk" name="device/asus/fugu" revision="5db03cd21db0868bc9209975af08422b80076175" />
+  <project clone-depth="1" groups="device,fugu,broadcom_pdk,pdk" name="device/asus/fugu-kernel" revision="ac723159b3b31d442dcadea3530b5837ce4d3207" />
+  <project clone-depth="1" name="opengapps/all" path="vendor/opengapps/sources/all" remote="github" revision="master" />
+  <project name="opengapps/aosp_build" path="vendor/google/build" remote="github" revision="master" />
+  <project clone-depth="1" name="opengapps/arm" path="vendor/opengapps/sources/arm" remote="github" revision="master" />
+  <project clone-depth="1" name="opengapps/arm64" path="vendor/opengapps/sources/arm64" remote="github" revision="master" />
+  <project name="ayufan-pine64/opengapps_atv_build" path="vendor/google/atv-build" remote="github" revision="nougat" />
+  <project groups="pdk" name="ayufan-pine64/external-minijail" path="external/minijail" remote="github" revision="nougat-7.1" />
+  <project groups="pdk" name="ayufan-pine64/frameworks-wilhelm" path="frameworks/wilhelm" remote="github" revision="nougat-7.1" />
+  <project groups="pdk" name="ayufan-pine64/hardware-aw" path="hardware/aw" remote="github" revision="nougat" />
+  <project groups="pdk" name="ayufan-pine64/hardware-libhardware" path="hardware/libhardware" remote="github" revision="nougat-7.1" />
+  <project groups="pdk" name="ayufan-pine64/hardware-realtek" path="hardware/realtek" remote="github" revision="nougat" />
+  <project clone-depth="1" groups="pdk" name="ayufan-pine64/linux-pine64" path="linux/kernel-tulip" remote="github" revision="my-hacks-1.2"/>
+  <project groups="pdk" name="ayufan-pine64/packages-apps-Provision" path="packages/apps/Provision" remote="github" revision="nougat-7.1" />
+  <project groups="pdk" name="ayufan-pine64/system-bt" path="system/bt" remote="github" revision="nougat-7.1" />
+  <project groups="pdk" name="ayufan-pine64/system-netd" path="system/netd" remote="github" revision="nougat-7.1" />
+  <project clone-depth="1" name="ayufan-pine64/vendor-supersu" path="vendor/supersu" remote="github" revision="nougat" />
+  
+  </manifest>

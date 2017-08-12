@@ -16,6 +16,9 @@
 
   <remote name="BlissRoms-Vendor" 
           fetch="https://github.com/BlissRoms-Vendor" />
+          
+  <remote name="brpine" 
+          fetch="https://github.com/BlissRoms-pine64" />
 
   <remote name="github"
           fetch="https://github.com" />
@@ -28,14 +31,15 @@
            sync-j="4" />
 
 <!-- BEGIN BLISS -->
-  <project path="build" name="platform_build" remote="BlissRoms" revision="n7.1" >
+  <project path="build" name="platform_build" remote="brpine" revision="n7.1-pine64" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="manifest" name="platform_manifest" remote="BlissRoms" revision="n7.1" />
   <project path="bionic" name="platform_bionic" remote="BlissRoms" revision="n7.1" />
   <project path="external/chromium-webview" name="platform_external_chromium-webview" remote="BlissRoms" revision="n7.0" /> 
-  <project path="frameworks/base" name="platform_frameworks_base" remote="BlissRoms" revision="n7.1" />
-  <project path="frameworks/native" name="platform_frameworks_native" remote="BlissRoms" revision="n7.1" />
+  <project path="frameworks/av" name="frameworks-av" groups="pdk" remote="brpine" revision="n7.1-pine64" />
+  <project path="frameworks/base" name="frameworks-base" remote="brpine" revision="n7.1.2-pine64" />
+  <project path="frameworks/native" name="frameworks-native" remote="brpine" revision="n7.1-pine64" />
   <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="BlissRoms" revision="n7.1" />
   <project path="frameworks/support" name="platform_frameworks_support" remote="BlissRoms" revision="n7.1" />
   <project path="hardware/broadcom/libbt" name="platform_hardware_broadcom_libbt" remote="BlissRoms" revision="n7.1" />
@@ -48,9 +52,9 @@
   <project path="hardware/qcom/msm8x74" name="platform_hardware_qcom_msm8x74" remote="BlissRoms" revision="n7.1" />
   <project path="packages/apps/Blissify" name="platform_packages_apps_Blissify" remote="BlissRoms" revision="n7.1" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="BlissRoms" revision="n7.1" />
-  <project path="system/core" name="platform_system_core" remote="BlissRoms" revision="n7.1" />
-  <project path="system/extras" name="platform_system_extras" remote="BlissRoms" revision="n7.1" />
-  <project path="system/sepolicy" name="platform_system_sepolicy" remote="BlissRoms" revision="n7.1" />  
+  <project path="system/core" name="system_core" remote="brpine" revision="n7.1-pine64" />
+  <project path="system/extras" name="system_extras" remote="brpine" revision="n7.1" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" remote="brpine" revision="n7.1-pine64" />  
   <project path="vendor/bliss" name="platform_vendor_bliss" remote="BlissRoms" revision="n7.1" />
   <project path="packages/apps/ThemeInterfacer" name="substratum/interfacer" remote="github" revision="n-rootless" />
   <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" remote="BlissRoms" revision="n7.1" />
@@ -258,7 +262,6 @@
   <project path="external/mdnsresponder" name="platform/external/mdnsresponder" groups="pdk" />
   <project path="external/mesa3d" name="platform/external/mesa3d" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/messageformat" name="platform/external/messageformat" groups="pdk-cw-fs,pdk-fs" />
-  <project path="external/minijail" name="platform/external/minijail" />
   <project path="external/mksh" name="platform/external/mksh" groups="pdk" />
   <project path="external/mmc-utils" name="platform/external/mmc-utils" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/mockftpserver" name="platform/external/mockftpserver" groups="pdk-fs" />
@@ -343,7 +346,6 @@
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -372,7 +374,6 @@
   <project path="frameworks/data-binding" name="platform/frameworks/data-binding" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/volley" name="platform/frameworks/volley" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/webview" name="platform/frameworks/webview" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" groups="pdk-cw-fs,pdk-fs" />
   <project path="hardware/akm" name="platform/hardware/akm" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="pdk,broadcom_wlan" />
   <project path="hardware/bsp/intel" name="platform/hardware/bsp/intel" />
@@ -392,7 +393,6 @@
   <project path="hardware/intel/img/psb_video" name="platform/hardware/intel/img/psb_video" groups="intel" />
   <project path="hardware/intel/sensors" name="platform/hardware/intel/sensors" groups="intel_sensors" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
-  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/marvell/bt" name="platform/hardware/marvell/bt" groups="marvell_bt" />
   <project path="hardware/qcom/bootctrl" name="platform/hardware/qcom/bootctrl" groups="pdk" />
@@ -439,7 +439,6 @@
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" groups="pdk-fs" />
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" groups="pdk-fs" />
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" groups="pdk-fs" />
-  <project path="packages/apps/Provision" name="platform/packages/apps/Provision" groups="pdk-fs" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" groups="pdk-fs" />
   <project path="packages/apps/SafetyRegulatoryInfo" name="platform/packages/apps/SafetyRegulatoryInfo" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" groups="pdk-fs" />
@@ -518,7 +517,6 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" />
-  <project path="system/bt" name="platform/system/bt" groups="pdk" />
   <project path="system/ca-certificates" name="platform/system/ca-certificates" groups="pdk" />
   <project path="system/connectivity/apmanager" name="platform/system/connectivity/apmanager" />
   <project path="system/connectivity/dhcp_client" name="platform/system/connectivity/dhcp_client" />
@@ -528,7 +526,6 @@
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/nativepower" name="platform/system/nativepower" />
-  <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/nvram" name="platform/system/nvram" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
   <project path="system/tools/aidl" name="platform/system/tools/aidl" groups="pdk-cw-fs,pdk-fs" />
@@ -565,5 +562,9 @@
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.0-sm" name="xanaxdroid/arm-eabi-7.0" remote="bitbucket" revision="sabermod" />
 
  <!-- END TOOLCHAINS -->
+ 
+  <!-- BlissRoms Additions -->
+  <include name="addons/pine64.xml"/>
+
 
 </manifest>
