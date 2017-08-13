@@ -18,7 +18,7 @@
           fetch="https://github.com/BlissRoms-Vendor" />
           
   <remote name="brpine" 
-          fetch="https://github.com/BlissRoms-pine64" />
+          fetch="https://github.com/blissroms-pine64" />
 
   <remote name="github"
           fetch="https://github.com" />
@@ -34,7 +34,7 @@
   <project path="build" name="platform_build" remote="brpine" revision="n7.1-pine64" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="manifest" name="platform_manifest" remote="BlissRoms" revision="n7.1" />
+  <project path="manifest" name="platform_manifest" remote="brpine" revision="n7.1-pine64" />
   <project path="bionic" name="platform_bionic" remote="BlissRoms" revision="n7.1" />
   <project path="external/chromium-webview" name="platform_external_chromium-webview" remote="BlissRoms" revision="n7.0" /> 
   <project path="frameworks/av" name="frameworks-av" groups="pdk" remote="brpine" revision="n7.1-pine64" />
@@ -52,8 +52,8 @@
   <project path="hardware/qcom/msm8x74" name="platform_hardware_qcom_msm8x74" remote="BlissRoms" revision="n7.1" />
   <project path="packages/apps/Blissify" name="platform_packages_apps_Blissify" remote="BlissRoms" revision="n7.1" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="BlissRoms" revision="n7.1" />
-  <project path="system/core" name="system_core" remote="brpine" revision="n7.1-pine64" />
-  <project path="system/extras" name="system_extras" remote="brpine" revision="n7.1" />
+  <project path="system/core" name="system-core" remote="brpine" revision="n7.1-pine64" />
+  <project path="system/extras" name="system-extras" remote="brpine" revision="n7.1" />
   <project path="system/sepolicy" name="platform_system_sepolicy" remote="brpine" revision="n7.1-pine64" />  
   <project path="vendor/bliss" name="platform_vendor_bliss" remote="BlissRoms" revision="n7.1" />
   <project path="packages/apps/ThemeInterfacer" name="substratum/interfacer" remote="github" revision="n-rootless" />

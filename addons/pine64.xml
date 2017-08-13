@@ -6,7 +6,7 @@
   <project groups="pdk" name="ayufan-pine64/android_external_ethtool" path="external/ethtool" remote="github" revision="s805_4.4.2_master" />
   <project groups="pdk" name="ayufan-pine64/boot-tools" path="vendor/ayufan-pine64/boot-tools" remote="github" revision="master"/>
   <project groups="pdk" name="ayufan-pine64/device-pine64-common" path="vendor/ayufan-pine64/pine64-common" remote="github" revision="master" />
-  <project groups="pdk" name="blissroms-pine64/device-softwinner" path="device/softwinner" remote="github" revision="n7.1-pine64" />
+  <project groups="pdk" name="device-softwinner" path="device/softwinner" remote="brpine" revision="n7.1-pine64" />
   <project groups="device,fugu,broadcom_pdk,pdk" name="device/asus/fugu" revision="5db03cd21db0868bc9209975af08422b80076175" />
   <project clone-depth="1" groups="device,fugu,broadcom_pdk,pdk" name="device/asus/fugu-kernel" revision="ac723159b3b31d442dcadea3530b5837ce4d3207" />
   <project clone-depth="1" name="opengapps/all" path="vendor/opengapps/sources/all" remote="github" revision="master" />
