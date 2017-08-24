@@ -37,10 +37,6 @@ please [read the wiki article](http://wiki.cyanogenmod.org/w/Github_Organization
 
 ***
 
-Using Build Script
-------------------
-
-run command  ". build.sh" and follow the command prompts.
 
 BLISS BUILD FLAGS
 -----------------
