@@ -39,7 +39,8 @@
   <project path="frameworks/av" name="frameworks-av" groups="pdk" remote="brpine" revision="n7.1-pine64" />
   <project path="frameworks/base" name="frameworks-base" remote="brpine" revision="n7.1-pine64" />
   <project path="frameworks/native" name="frameworks-native" remote="brpine" revision="nougat-7.1-pine64" />
-  <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="BlissRoms" revision="n7.1" />
+  <project groups="pdk" name="platform/frameworks/opt/telephony" path="frameworks/opt/telephony" revision="37392ec092a43a2f66f192b54895769d8f6ce09d" upstream="refs/tags/android-7.1.2_r11"/>
+
   <project path="frameworks/support" name="platform_frameworks_support" remote="BlissRoms" revision="n7.1" />
   <project path="hardware/broadcom/libbt" name="platform_hardware_broadcom_libbt" remote="BlissRoms" revision="n7.1" />
   <project path="hardware/qcom/audio" name="platform_hardware_qcom_audio" remote="BlissRoms" revision="n7.1" />

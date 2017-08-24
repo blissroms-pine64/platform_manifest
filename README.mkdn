@@ -6,8 +6,11 @@ Getting Started
 To get started with Android/Bliss, you'll need to get
 familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
 
-To initialize your local repository using the Bliss trees, use this command:
+First we will need to install the dependencies:
 
+	sudo apt-get install dos2unix gcc-aarch64-linux-gnu gcc-4.7-arm-linux-gnueabi
+
+To initialize your local repository using the Bliss trees, use this command:
 
     repo init -u https://github.com/blissroms-pine64/platform_manifest.git -b n7.1-pine64
 
@@ -17,17 +20,17 @@ Then to sync up:
 
 This(j#) depends on number of cpu cores - use just "repo sync" if you are unsure.
 
-To build for your device.
+To build for your device:
 
-. build/envsetup.sh
+	. build/envsetup.sh
 
-lunch `device name here`
+lunch `device name here`:
 
-make -j#
+	make -j#
 
-or make it all in one line.
+or make it all in one line:
 
-. build/envsetup.sh && lunch `device name here` && make -j#
+	. build/envsetup.sh && lunch `device name here` && make -j#
 
 For more information on this Github Organization and how it is structured,
 please [read the wiki article](http://wiki.cyanogenmod.org/w/Github_Organization)
