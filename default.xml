@@ -30,15 +30,15 @@
            sync-j="4" />
 
 <!-- BEGIN BLISS -->
-  <project path="build" name="platform_build" remote="brpine" revision="n7.1-pine64" >
+  <project path="build" name="platform_build" remote="brpine" revision="nougat-7.1" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="manifest" name="platform_manifest" remote="brpine" revision="n7.1-pine64" />
   <project path="bionic" name="platform_bionic" remote="BlissRoms" revision="n7.1" />
   <project path="external/chromium-webview" name="platform_external_chromium-webview" remote="BlissRoms" revision="n7.0" /> 
   <project path="frameworks/av" name="frameworks-av" groups="pdk" remote="brpine" revision="n7.1-pine64" />
-  <project path="frameworks/base" name="frameworks-base" remote="brpine" revision="n7.1.2-pine64" />
-  <project path="frameworks/native" name="frameworks-native" remote="brpine" revision="n7.1-pine64" />
+  <project path="frameworks/base" name="frameworks-base" remote="brpine" revision="n7.1-pine64" />
+  <project path="frameworks/native" name="frameworks-native" remote="brpine" revision="nougat-7.1-pine64" />
   <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="BlissRoms" revision="n7.1" />
   <project path="frameworks/support" name="platform_frameworks_support" remote="BlissRoms" revision="n7.1" />
   <project path="hardware/broadcom/libbt" name="platform_hardware_broadcom_libbt" remote="BlissRoms" revision="n7.1" />
@@ -66,6 +66,13 @@
 
 <!-- END BLISS -->
 
+<!-- BEGIN OPENGAPPS-X86 -->
+
+  <project path="vendor/google/build" name="electrikjesus/aosp_build" revision="master" remote="github" />
+  <project path="vendor/opengapps/sources/all" name="electrikjesus/all" clone-depth="1" revision="n7.1" remote="github" />
+  
+<!-- END OPENGAPPS-X86 -->
+
 <!-- BEGIN DEVICE -->
   <project groups="pdk" name="ayufan-pine64/android_external_busybox" path="external/busybox" remote="github" revision="nougat" />
   <project groups="pdk" name="ayufan-pine64/android_external_ethtool" path="external/ethtool" remote="github" revision="s805_4.4.2_master" />
@@ -74,17 +81,17 @@
   <project groups="pdk" name="device-softwinner" path="device/softwinner" remote="brpine" revision="n7.1-pine64" />
   <project groups="device,fugu,broadcom_pdk,pdk" name="device/asus/fugu" revision="5db03cd21db0868bc9209975af08422b80076175" />
   <project clone-depth="1" groups="device,fugu,broadcom_pdk,pdk" name="device/asus/fugu-kernel" revision="ac723159b3b31d442dcadea3530b5837ce4d3207" />
-  <project clone-depth="1" name="opengapps/all" path="vendor/opengapps/sources/all" remote="github" revision="master" />
-  <project name="opengapps/aosp_build" path="vendor/google/build" remote="github" revision="master" />
+  <!--<project clone-depth="1" name="opengapps/all" path="vendor/opengapps/sources/all" remote="github" revision="master" />
+  <project name="opengapps/aosp_build" path="vendor/google/build" remote="github" revision="master" /> -->
   <project clone-depth="1" name="opengapps/arm" path="vendor/opengapps/sources/arm" remote="github" revision="master" />
   <project clone-depth="1" name="opengapps/arm64" path="vendor/opengapps/sources/arm64" remote="github" revision="master" />
-  <project name="ayufan-pine64/opengapps_atv_build" path="vendor/google/atv-build" remote="github" revision="nougat" />
+  <project name="ayufan-pine64/opengapps_atv_build" path="vendor/google/atv-build" remote="github" revision="nougat" /> 
   <project groups="pdk" name="ayufan-pine64/external-minijail" path="external/minijail" remote="github" revision="nougat-7.1" />
   <project groups="pdk" name="ayufan-pine64/frameworks-wilhelm" path="frameworks/wilhelm" remote="github" revision="nougat-7.1" />
   <project groups="pdk" name="ayufan-pine64/hardware-aw" path="hardware/aw" remote="github" revision="nougat" />
   <project groups="pdk" name="ayufan-pine64/hardware-libhardware" path="hardware/libhardware" remote="github" revision="nougat-7.1" />
   <project groups="pdk" name="ayufan-pine64/hardware-realtek" path="hardware/realtek" remote="github" revision="nougat" />
-  <project clone-depth="1" groups="pdk" name="ayufan-pine64/linux-pine64" path="linux/kernel-tulip" remote="github" revision="my-hacks-1.2"/>
+  <project clone-depth="1" groups="pdk" name="blissroms-pine64/linux-pine64" path="linux/kernel-tulip" remote="github" revision="n7.1-pine64"/>
   <project groups="pdk" name="ayufan-pine64/packages-apps-Provision" path="packages/apps/Provision" remote="github" revision="nougat-7.1" />
   <project groups="pdk" name="ayufan-pine64/system-bt" path="system/bt" remote="github" revision="nougat-7.1" />
   <project groups="pdk" name="ayufan-pine64/system-netd" path="system/netd" remote="github" revision="nougat-7.1" />
@@ -124,7 +131,7 @@
   <project path="device/sample" name="device/sample" groups="pdk" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
-  <project path="external/adt-infra" name="platform/external/adt-infra" groups="adt-infra,notdefault" />
+  <project path="external/adt-infra" name="platform/external/adt-infra" groups="adt-infra,pdk" />
   <project path="external/android-clat" name="platform/external/android-clat" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/androidplot" name="platform/external/androidplot" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/ant-glob" name="platform/external/ant-glob" groups="pdk-cw-fs,pdk-fs" />
@@ -222,7 +229,7 @@
   <project path="external/jemalloc" name="platform/external/jemalloc" groups="pdk" />
   <project path="external/jetty" name="platform/external/jetty" groups="pdk-fs" />
   <project path="external/jhead" name="platform/external/jhead" groups="pdk" />
-  <project path="external/jline" name="platform/external/jline" groups="notdefault,tradefed" />
+  <project path="external/jline" name="platform/external/jline" groups="pdk,tradefed" />
   <project path="external/jmdns" name="platform/external/jmdns" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/jsilver" name="platform/external/jsilver" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/jsmn" name="platform/external/jsmn" groups="pdk" />
@@ -507,7 +514,7 @@
   <project path="prebuilts/deqp" name="platform/prebuilts/deqp" groups="pdk-fs" />
   <project path="prebuilts/devtools" name="platform/prebuilts/devtools" groups="pdk-fs" />
   <project path="prebuilts/eclipse" name="platform/prebuilts/eclipse" groups="pdk" />
-  <project path="prebuilts/eclipse-build-deps" name="platform/prebuilts/eclipse-build-deps" groups="notdefault,eclipse" />
+  <project path="prebuilts/eclipse-build-deps" name="platform/prebuilts/eclipse-build-deps" groups="pdk,eclipse" />
   <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,darwin,arm" />
   <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" groups="pdk,darwin,arm" />
   <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" groups="pdk,darwin,arm" />
@@ -538,7 +545,7 @@
   <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" groups="pdk" clone-depth="1" />
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
-  <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" />
+  <project path="sdk" name="platform/sdk" groups="pdk,pdk-cw-fs,pdk-fs" />
   <project path="system/ca-certificates" name="platform/system/ca-certificates" groups="pdk" />
   <project path="system/connectivity/apmanager" name="platform/system/connectivity/apmanager" />
   <project path="system/connectivity/dhcp_client" name="platform/system/connectivity/dhcp_client" />
@@ -557,18 +564,18 @@
   <project path="system/weaved" name="platform/system/weaved" />
   <project path="system/webservd" name="platform/system/webservd" />
   <project path="toolchain/binutils" name="toolchain/binutils" />
-  <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" />
-  <project path="tools/base" name="platform/tools/base" groups="notdefault,tools" />
-  <project path="tools/build" name="platform/tools/build" groups="notdefault,tools" />
+  <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="pdk,tools" />
+  <project path="tools/base" name="platform/tools/base" groups="pdk,tools" />
+  <project path="tools/build" name="platform/tools/build" groups="pdk,tools" />
   <project path="tools/external/fat32lib" name="platform/tools/external/fat32lib" groups="tools" />
   <project path="tools/external/gradle" name="platform/tools/external/gradle" groups="tools" />
-  <project path="tools/idea" name="platform/tools/idea" groups="notdefault,tools" />
-  <project path="tools/loganalysis" name="platform/tools/loganalysis" groups="notdefault,tradefed" />
-  <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
-  <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
-  <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
+  <project path="tools/idea" name="platform/tools/idea" groups="pdk,tools" />
+  <project path="tools/loganalysis" name="platform/tools/loganalysis" groups="pdk,tradefed" />
+  <project path="tools/motodev" name="platform/tools/motodev" groups="pdk,motodev" />
+  <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="pdk,tools" />
+  <project path="tools/swt" name="platform/tools/swt" groups="pdk,tools" />
   <project path="tools/test/connectivity" name="platform/tools/test/connectivity" />
-  <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
+  <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="pdk,tradefed" />
 <!-- END AOSP -->
 
 <!-- BEGIN TOOLCHAINS -->
