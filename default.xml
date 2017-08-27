@@ -92,7 +92,7 @@
   <project groups="pdk" name="ayufan-pine64/hardware-aw" path="hardware/aw" remote="github" revision="nougat" />
   <project groups="pdk" name="ayufan-pine64/hardware-libhardware" path="hardware/libhardware" remote="github" revision="nougat-7.1" />
   <project groups="pdk" name="ayufan-pine64/hardware-realtek" path="hardware/realtek" remote="github" revision="nougat" />
-  <project clone-depth="1" groups="pdk" name="blissroms-pine64/linux-pine64" path="linux/kernel-tulip" remote="github" revision="n7.1-pine64"/>
+  <project clone-depth="1" groups="pdk" name="blissroms-pine64/linux-pine64" path="linux/kernel-tulip" remote="github" revision="my-hacks-1.2"/>
   <project groups="pdk" name="ayufan-pine64/packages-apps-Provision" path="packages/apps/Provision" remote="github" revision="nougat-7.1" />
   <project groups="pdk" name="ayufan-pine64/system-bt" path="system/bt" remote="github" revision="nougat-7.1" />
   <project groups="pdk" name="ayufan-pine64/system-netd" path="system/netd" remote="github" revision="nougat-7.1" />
