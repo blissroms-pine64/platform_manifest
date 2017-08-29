@@ -64,6 +64,7 @@
   <project path="packages/apps/PhoneCommon" name="platform_packages_apps_PhoneCommon" remote="BlissRoms" revision="n7.1" />
   <project name="platform_packages_apps_BlissOTA" path="packages/apps/BlissOTA" remote="BlissRoms" revision="n7.1-caf" />
   <project name="platform_packages_apps_AboutBliss" path="packages/apps/AboutBliss" remote="BlissRoms" revision="n7.1-caf" />
+  <project name="BlissRoms-x86/vendor-supersu" path="vendor/supersu" remote="github" revision="nougat" />
 
 <!-- END BLISS -->
 
@@ -96,8 +97,7 @@
   <project groups="pdk" name="ayufan-pine64/packages-apps-Provision" path="packages/apps/Provision" remote="github" revision="nougat-7.1" />
   <project groups="pdk" name="ayufan-pine64/system-bt" path="system/bt" remote="github" revision="nougat-7.1" />
   <project groups="pdk" name="ayufan-pine64/system-netd" path="system/netd" remote="github" revision="nougat-7.1" />
-  <project clone-depth="1" name="ayufan-pine64/vendor-supersu" path="vendor/supersu" remote="github" revision="nougat" />
-
+  
 <!-- BEGIN AOSP -->  
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="build/kati" name="platform/build/kati" groups="pdk,tradefed" />
