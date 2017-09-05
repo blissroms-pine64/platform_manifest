@@ -20,17 +20,30 @@ Then to sync up:
 
 This(j#) depends on number of cpu cores - use just "repo sync" if you are unsure.
 
-To build for your device:
+To build for your device, first setup your build environment:
 
 	. build/envsetup.sh
 
-lunch `device name here`:
+Then pick your lunch combo:
 
-	make -j#
+	lunch 'device name here'
+	
+Then use make to start the build process:
+
+	make -j# 
+	
+Then when make completes, use the sdcard_image function to package up your build
+For Pinebook:
+	
+	sdcard_image Bliss-Pinebook.img.xz pinebook
+	
+For Pine64/A64+:
+
+	sdcard_image Bliss-Pine64.img.xz plus
 
 or make it all in one line:
 
-	. build/envsetup.sh && lunch `device name here` && make -j#
+	. build/envsetup.sh && lunch `device name here` && make -j# && sdcard_image Bliss-Pinebook.img.xz pinebook
 
 For more information on this Github Organization and how it is structured,
 please [read the wiki article](http://wiki.cyanogenmod.org/w/Github_Organization)
