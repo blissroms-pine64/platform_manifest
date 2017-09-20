@@ -35,11 +35,11 @@ Then use make to start the build process:
 Then when make completes, use the sdcard_image function to package up your build
 For Pinebook:
 	
-	sdcard_image Bliss-Pinebook.img.xz pinebook
+	sdcard_image Bliss-Pinebook.img.gz pinebook
 	
 For Pine64/A64+:
 
-	sdcard_image Bliss-Pine64.img.xz plus
+	sdcard_image Bliss-Pine64.img.gz plus
 
 or make it all in one line:
 
